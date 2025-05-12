@@ -1,0 +1,29 @@
+{
+  "name": "be-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sridhar3489/be-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sridhar3489/be-docker/issues"
+  },
+  "homepage": "https://github.com/Sridhar3489/be-docker#readme",
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0",
+    "prisma": "^6.7.0",
+    "typescript": "^5.8.3"
+  }
+}
