@@ -22,3 +22,6 @@
 - Create docker image with host network - `docker build -t node-server .`
 - Run node-server image with bridge network and connecting db to running pg-db container - `docker run -d --network prisma-node -p 3000:3000 -e DATABASE_URL="postgresql://myuser:mypassword@pg_db:5432/postgres" node-server`
 - Create an entrypoint.sh file to run migrations during bridge network communication and add it in CMD of Dockerfile
+
+### docker-compose.yml
+- Change .env to main container (db container) credentials
