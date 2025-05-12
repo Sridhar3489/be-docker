@@ -1,0 +1,25 @@
+services:
+  database:
+    image: postgres:latest
+    container_name: pgdb
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - node-prisma
+    
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    networks:
+      - node-prisma
+
+networks:
+  node-prisma:
